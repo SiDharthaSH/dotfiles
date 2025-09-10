@@ -28,7 +28,7 @@ floating_modifier $mod
 bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run -fn 'DejaVu Sans Mono-14'
+bindsym $mod+d exec --no-startup-id dmenu_run -fn 'DejaVu Sans Mono-14' -nb '#000000'
 
 # kill focused window
 bindsym $mod+Shift+q kill
