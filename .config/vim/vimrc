@@ -1,0 +1,30 @@
+"- options
+"-------------------------------------------------------------------------------
+"- Syntax highlighting
+syntax on
+
+"- Relative and absolute line numbers combined
+set number relativenumber
+
+"- Colored Column
+set colorcolumn=80
+
+"- Scroff
+set scrolloff=5
+
+"- Preview substitutions
+set incsearch 
+
+"- Text wrapping
+set nowrap
+
+"- Tabstops
+set shiftwidth=2 softtabstop=-1 
+" C-t indents with 2 spaces
+" mirror in BS
+
+"- Window splitting
+set splitright splitbelow 
+
+"- Save undo history
+set undofile 

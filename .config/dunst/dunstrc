@@ -1,0 +1,21 @@
+# vim: ft=cfg
+[global]
+    font = DejaVu Sans Mono Book 12
+
+    offset = (0, 0)
+    frame_width = 1
+
+    foreground = "#ffffff"
+    background = "#000000"
+
+[urgency_low]
+    frame_color = "#ffffff"
+    timeout = 15
+
+[urgency_normal]
+    frame_color = "#0000ff"
+    timeout = 30
+
+[urgency_critical]
+    frame_color = "#ff0000"
+    timeout = 0

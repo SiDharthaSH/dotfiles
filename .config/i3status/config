@@ -1,12 +1,7 @@
 # vim: filetype=conf
-# This is vim modeline feature example
 
 general {
   colors = true
-  color_good = "#33FF66"
-  color_degraded = "#EEFF33"
-  color_bad = "#FF3366"
-
   interval = 1
 }
 
@@ -21,15 +16,24 @@ order += "battery all"
 order += "tztime local"
 
 
-# CPU Usage
+# Wifi Status
+# ------------------------------------------------------------------------------
+wireless _first_ {
+  format_up = "Online"
+  format_down = ""
+
+  separator_block_width = 20
+}
+
+
+# CPU Usage 
 # ------------------------------------------------------------------------------
 cpu_usage {
-  format = "CPU %usage"
-  degraded_threshold = 50
+  format = ""
+  format_above_threshold = "CPU %usage"
   max_threshold = 90
 
-  separator = false
-  #separator_block_width = 20
+  separator_block_width = 20
 }
 
 
@@ -37,7 +41,8 @@ cpu_usage {
 # ------------------------------------------------------------------------------
 cpu_temperature 0 {
   path = "/sys/devices/platform/coretemp.0/hwmon/hwmon4/temp1_input"
-  format = "(%degrees °C)"
+  format = ""
+  format_above_threshold = "TEMP %degrees °C"
   max_threshold = 70
 
   separator_block_width = 20
@@ -47,7 +52,8 @@ cpu_temperature 0 {
 # Memory Usage
 # ------------------------------------------------------------------------------
 memory {
-  format = "MEM %percentage_used"
+  format = ""
+  format_degraded = "MEM %percentage_used"
   threshold_degraded = "50%"
   threshold_critical = "20%"
 
@@ -58,7 +64,8 @@ memory {
 # Disk Usage
 # ------------------------------------------------------------------------------
 disk / {
-  format = "DISK %percentage_used_of_avail"
+  format = ""
+  format_below_threshold = "DISK %percentage_used_of_avail"
   low_threshold = 20
 
   separator_block_width = 20
@@ -76,20 +83,11 @@ volume master {
 }
 
 
-# Wifi Status
-# ------------------------------------------------------------------------------
-wireless _first_ {
-  format_up = "Online"
-  format_down = ""
-
-  separator_block_width = 20
-}
-
-
 # Battery (Real Value)
 # ------------------------------------------------------------------------------
 battery all {
   format = "%status %percentage"
+  format_percentage = "%.f%s"
   threshold_type = "percentage"
   low_threshold = 10
 

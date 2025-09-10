@@ -1,5 +1,5 @@
 xset s 300
-xset dpms 310 310 310 
-xrandr --output eDP-1 --mode 1366x768 --rate 60
+xset dpms 300 300 300 
+picom -b
 dunst &
 exec i3
