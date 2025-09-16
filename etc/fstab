@@ -7,5 +7,6 @@ UUID=f204f5c5-4863-4974-88a6-ad9e98e708f2	/		ext4		rw,relatime												0	1
 UUID=346C-C9B3					/boot		vfat		rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro	0	2
 
 # /dev/sda3
-# Swap is managed by systemd so run `systemctl --type swap` then mask it to disable auto activation.
+# Swap is managed by systemd so run `systemctl --type swap` then 
+# Mask it by `systemctl mask 'full-unit-name'`
 #UUID=ecfb328c-c779-4b93-855d-571cc20b59fa	none		swap		defaults												0	0
