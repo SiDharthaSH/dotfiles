@@ -1,5 +1,11 @@
 "- options
 "-------------------------------------------------------------------------------
+"- colorscheme
+colorscheme default
+
+"- background
+set background=dark
+
 "- Syntax highlighting
 syntax on
 
@@ -12,7 +18,7 @@ set colorcolumn=80
 "- Scroff
 set scrolloff=5
 
-"- Preview substitutions
+"- search as you type
 set incsearch 
 
 "- Text wrapping
