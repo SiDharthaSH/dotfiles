@@ -1,0 +1,17 @@
+[user]
+	name = xxx
+	email = xxx
+[init]
+	defaultBranch = main
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[core]
+	editor = vim
+[diff]
+	tool = vimdiff
+[difftool "vimdiff"]
+	cmd = vimdiff $REMOTE $LOCAL 
