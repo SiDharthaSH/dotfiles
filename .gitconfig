@@ -13,5 +13,3 @@
 	editor = vim
 [diff]
 	tool = vimdiff
-[difftool "vimdiff"]
-	cmd = vimdiff $REMOTE $LOCAL 
